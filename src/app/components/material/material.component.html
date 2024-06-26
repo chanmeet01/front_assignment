@@ -1,0 +1,47 @@
+<div style="background: #f9f9f9; border-radius: 8px; max-width: 500px;" class="container p-4">
+    <!--<app-search-bar (searchTextChanged)="onSearchTextEntered($event)" > </app-search-bar>-->
+    <img [src]="item.imageUrl" alt="" class="img-thumbnail" style="padding:0%;">
+
+    <h5 class="my-3"><b>{{item.name}}</b></h5>
+
+    <div class="my-3 d-flex" style="justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+        <button type="button" class="btn btn-outline-dark flex-1" style="border-radius: 1.5rem; font-size: 0.85rem;"
+            *ngFor="let tag of item.tags">{{tag}}
+        </button>
+    </div>
+
+    <p class="my-3" style="color: grey;">{{item.description}}</p>
+
+
+    <div class="my-3">
+        <p style="margin-bottom: 0;">Available color:</p>
+
+        <button class="btn" style="border-radius: 200px; border-color: #f9f9f9; box-shadow: #f9f9f9;"> <i
+                class="fa-solid fa-circle-dot" style="color: black;"></i></button>
+        <button class="btn" style="border-radius: 200px; border-color: #f9f9f9;"><i class="fa-solid fa-circle-dot"
+                style="color: blue;"></i></button>
+        <button class="btn" style="border-radius: 200px; border-color: #f9f9f9;"><i class="fa-solid fa-circle-dot"
+                style="color: red;"></i></button>
+        <button class="btn" style="border-radius: 200px; border-color: #f9f9f9;"><i class="fa-solid fa-circle-dot"
+                style="color: green;"></i></button>
+        <button class="btn" style="border-radius: 200px; border-color: #f9f9f9;"><i class="fa-solid fa-circle-dot"
+                style="color: white;"></i></button>
+    </div>
+
+    <p> More: </p>
+    <div class="d-flex my-2" style="align-items: center;">
+        <i class="fa-solid fa-circle-check text-success"></i>
+        <label style="margin-left: 4px;"><strong>description about pros</strong></label>
+    </div>
+
+    <div class="d-flex my-2" style="align-items: center;">
+        <i class="fa-solid fa-circle-check text-success"></i>
+        <label style="margin-left: 4px;"><strong>description about cons</strong></label>
+    </div>
+
+    <div class="d-flex my-2" style="align-items: center;">
+        <i class="fa-solid fa-circle-check text-success"></i>
+        <label style="margin-left: 4px;"><strong>description about others</strong></label>
+    </div>
+
+</div>

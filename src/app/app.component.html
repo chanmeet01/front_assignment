@@ -1,0 +1,12 @@
+<main>
+  <app-header (searchTextFieldChangeEvent)="onSearchTextChange($event)" />
+  <app-filter (CheckedElementEvent)="onCheckedElement($event)"></app-filter>
+ 
+  <div class="p-4 g-4 row">
+    <div *ngFor="let item of items" class="col-md-4 col-sm-6">
+      <app-material [item]="item"> </app-material>
+    </div>
+  </div>
+
+  <app-filter />
+</main>
